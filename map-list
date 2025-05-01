@@ -1,0 +1,47 @@
+numeros = [1, 2, 3, 4]
+
+# Usando a função map
+dobrados = map(lambda x: x * 2, numeros)
+
+# Convertendo o objeto map para uma lista
+print(list(dobrados))  # Saída: [2, 4, 6, 8]
+
+
+#Você também pode usar uma função definida para aplicar com map:
+def quadrado(x):
+    return x ** 2
+
+numeros = [1, 2, 3, 4]
+quadrados = map(quadrado, numeros)
+print(list(quadrados))  # Saída: [1, 4, 9, 16]
+
+
+
+#Exemplo com Múltiplos Iteráveis
+#Você pode usar map com múltiplos iteráveis, desde que eles tenham o mesmo tamanho:
+a = [1, 2, 3]
+b = [4, 5, 6]
+
+# Soma os elementos correspondentes de a e b
+somas = map(lambda x, y: x + y, a, b)
+print(list(somas))  # Saída: [5, 7, 9]
+
+
+#Transformação de Dados com map
+#Ele é muito útil para transformar dados:
+nomes = ["ana", "carlos", "maria"]
+# Converte cada nome para maiúsculas
+maiusculas = map(str.upper, nomes)
+print(list(maiusculas))  # Saída: ['ANA', 'CARLOS', 'MARIA']
+
+#Comparação com Compreensões de Lista
+#Embora map seja poderoso, muitas vezes pode ser substituído por uma compreensão de lista:
+# Usando map
+numeros = [1, 2, 3, 4]
+dobrados = list(map(lambda x: x * 2, numeros))
+
+# Usando compreensão de lista
+dobrados_comp = [x * 2 for x in numeros]
+
+print(dobrados)  # Saída: [2, 4, 6, 8]
+print(dobrados_comp)  # Saída: [2, 4, 6, 8]

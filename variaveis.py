@@ -29,3 +29,4 @@ print(z)  # Saída: 3
 #Exemplo 5: Combinando múltiplas declarações
 a, b, c = 1, 2, 3; d = 4
 print(a, b, c, d)  # Saída: 1 2 3 4
+
